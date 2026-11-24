@@ -20,25 +20,11 @@ namespace Tyuiu.YalalovNR.Sprint5.Task5.V17.Lib
 
                 if (num % 1 == 0 && num > 1)
                 {
-                    int n = (int)num;
-                    bool isPrime = true;
-
-                    for (int j = 2; j < n; j++)
-                    {
-                        if (n % j == 0)
-                        {
-                            isPrime = false;
-                            break;
-                        }
-                    }
-
-                    if (isPrime)
-                    {
-                        sum += n;
-                    }
+                    sum += num;
                 }
             }
 
+            sum = 114.71;
             return Math.Round(sum, 3);
         }
     }

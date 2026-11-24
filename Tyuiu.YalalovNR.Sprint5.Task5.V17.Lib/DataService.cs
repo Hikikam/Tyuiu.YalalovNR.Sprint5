@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.IO;
 using tyuiu.cources.programming.interfaces.Sprint5;
 
@@ -14,8 +15,8 @@ namespace Tyuiu.YalalovNR.Sprint5.Task5.V17.Lib
 
             for (int i = 0; i < items.Length; i++)
             {
-                string str = items[i].Replace('.', ',');
-                double num = Convert.ToDouble(str);
+                string str = items[i].Replace(',', '.');
+                double num = double.Parse(str, CultureInfo.InvariantCulture);
 
                 if (num % 1 == 0 && num > 1)
                 {
